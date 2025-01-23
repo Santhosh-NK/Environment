@@ -1,0 +1,23 @@
+name: environment
+on: 
+    workflow_dispatch:
+      inputs:
+        name:
+            description: 'enter the name'
+            required: true
+            default: 'Ammu'
+            type: string
+jobs:
+    printing_the_variable:
+        runs-on: ubuntu-latest
+        environment: PRODUCTION # it will only work when you already configured the environment
+        steps: 
+            - name: step1
+              run: |
+                echo ${{env.NAME}}
+                echo ${{inputs.name}}
+
+
+
+
+
