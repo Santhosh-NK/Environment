@@ -16,6 +16,9 @@ jobs:
               run: |
                 echo ${{vars.NAME}}
                 echo ${{inputs.name}}
+            - name: step2
+              run: echo "Step 2 executed"
+
 
 
 
