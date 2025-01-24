@@ -14,7 +14,7 @@ jobs:
         steps: 
             - name: step1
               run: |
-                echo ${{env.NAME}}
+                echo ${{vars.NAME}}
                 echo ${{inputs.name}}
 
 
