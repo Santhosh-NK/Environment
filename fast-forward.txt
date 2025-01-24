@@ -1,3 +1,5 @@
 This is a placeholder text for the file `fast-forward.txt`.
 You can replace this text with your desired content.
 You can replace this text with your desired content.
+GitHub is a platform for version control and collaboration.
+It lets you and others work together on projects from anywhere.
