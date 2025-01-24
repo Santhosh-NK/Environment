@@ -1,3 +1,6 @@
 This is a placeholder text for the file `fast-forward.txt`.
 You can replace this text with your desired content.
 You can replace this text with your desired content.
+Git is a distributed version control system.
+It helps you track changes in your code over time.
+You can collaborate with others using Git.
