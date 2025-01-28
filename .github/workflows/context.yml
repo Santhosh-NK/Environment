@@ -7,6 +7,6 @@ jobs:
             - name: Json_github
               run: echo "${{toJson(github)}}"
             - name: checking_out
-              run: actions/checkout@v4
+              uses: actions/checkout@v4
             - name: echo_things
               run: echo "${{github.actions}}"
