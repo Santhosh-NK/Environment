@@ -9,4 +9,4 @@ jobs:
             - name: checking_out
               uses: actions/checkout@v4
             - name: echo_things
-              run: echo "${{github.workspace}}"
+              run: echo "${{github.ref_name}}"
