@@ -4,12 +4,10 @@ You can replace this text with your desired content.
 Git is a distributed version control system.
 It helps you track changes in your code over time.
 You can collaborate with others using Git.
-<<<<<<< HEAD
 Power Rangers SPD is a TV show about a team of rangers.
 They protect the world from alien threats.
 Each ranger has unique abilities and weapons.
 The show is set in the future, in the year 2025.
-=======
 GitHub is a platform for version control and collaboration.
 It lets you and others work together on projects from anywhere.
 Power Rangers is a popular franchise that features a team of superheroes.
@@ -17,4 +15,3 @@ Each Power Ranger has unique abilities and powers.
 They work together to fight against evil forces.
 The franchise includes TV shows, movies, and merchandise.
 Power Rangers has a large fan base around the world.
->>>>>>> feature-branch
