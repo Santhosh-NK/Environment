@@ -1,0 +1,11 @@
+name: Permission
+on: [push, pull_request]
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create a new issue
+        run: gh issue create --title "Bug Report" --body "Details about the issue."
