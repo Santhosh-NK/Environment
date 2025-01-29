@@ -6,3 +6,8 @@ jobs:
         steps: 
             - name: Json_github
               run: echo "${{toJson(github)}}"
+            - name: checking_out
+              uses: actions/checkout@v4
+            - name: echo_things
+              run: echo "${{github.ref}}"
+
