@@ -3,7 +3,7 @@ name: Read Check Status
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   check-status:
