@@ -1,9 +1,7 @@
 name: Deploy App Service
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
