@@ -22,18 +22,17 @@ resource appService 'Microsoft.Web/sites@2022-03-01' = {
   kind: 'app'
   properties: {
     serverFarmId: appServicePlan.id
-  }
-}
-resource connectionstrings 'Microsoft.Web/sites/config@2024-04-01'  = if (storageAccountName == 'storageaccount-appservice150'){
-  parent: appService
-  name: 'azurestorageaccounts'
-  properties: {
-    '${storageAccountMountName}': {
+    siteConfig: {
+      azureStorageAccounts: storageAccountName == 'storageaccount-appservice1508' ?{
+        '${storageAccountMountName}': {
           type: 'AzureFiles'
           accountName: storageAccountName
           shareName: shareName
           accessKey: listKeys(resourceId(storageAccountResourceGroup, 'Microsoft.Storage/storageAccounts', storageAccountName), '2022-09-01').keys[0].value
           mountPath: '/mounts/${storageAccountMountName}'
         }
-  } 
+      }:null
+    }
+  }
 }
+
