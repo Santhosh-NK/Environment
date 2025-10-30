@@ -24,7 +24,7 @@ resource appService 'Microsoft.Web/sites@2022-03-01' = {
     serverFarmId: appServicePlan.id
     siteConfig: {
       azureStorageAccounts: appServiceName == 'storageaccount-appservice1508' ?{
-        '${storageAccountMountName}': {
+        'santhosh-filemount' : {
           type: 'AzureFiles'
           accountName: storageAccountName
           shareName: shareName
