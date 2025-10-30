@@ -23,7 +23,7 @@ resource appService 'Microsoft.Web/sites@2022-03-01' = {
   properties: {
     serverFarmId: appServicePlan.id
     siteConfig: {
-      azureStorageAccounts: storageAccountName == 'storageaccount-appservice1508' ?{
+      azureStorageAccounts: appServiceName == 'storageaccount-appservice1508' ?{
         '${storageAccountMountName}': {
           type: 'AzureFiles'
           accountName: storageAccountName
