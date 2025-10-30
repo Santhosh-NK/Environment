@@ -28,7 +28,7 @@ resource appService 'Microsoft.Web/sites@2022-03-01' = {
           type: 'AzureFiles'
           accountName: storageAccountName
           shareName: shareName
-          accessKey: listKeys(resourceId(storageAccountResourceGroup, 'Microsoft.Storage/storageAccounts', storageAccountName), '2022-09-01').keys[0].value
+          accessKey: listKeys(resourceId(storageAccountResourceGroup, 'Microsoft.Storage/storageAccounts', storageAccountName), '2024-09-01').keys[0].value
           mountPath: '/mounts/${storageAccountMountName}'
         }
       }:null
