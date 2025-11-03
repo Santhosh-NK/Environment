@@ -1,4 +1,4 @@
-name: Deploy App Service
+name: Codecheck
 
 on:
   pull_request:
