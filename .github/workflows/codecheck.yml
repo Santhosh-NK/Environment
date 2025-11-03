@@ -19,8 +19,13 @@ jobs:
     - name: Validate Bicep templates to ensure transpilation, linting, and preflight are successful
       shell: bash
       run: |
+<<<<<<< HEAD
              chmod +x $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh
              $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh 
+=======
+          chmod +x $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh
+          $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh 
+>>>>>>> f375d54d310f5c83a4d9dcb373b5313a5431ebfa
 
 
     - name: Deploy App Service
