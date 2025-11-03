@@ -3,7 +3,7 @@ name: Deploy App Service
 on:
   pull_request:
     branches:
-      - main
+      - master
       - dev
       - test
     types: opened
