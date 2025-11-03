@@ -8,7 +8,7 @@ param location string = resourceGroup().location
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   name: appServicePlanName
-  location: locatio
+  location: location
   sku: {
     name: 'S1'
     tier: 'standard'
