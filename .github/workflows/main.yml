@@ -13,4 +13,4 @@ jobs:
 
     - name: Deploy App Service
       run: |
-        az deployment group create --resource-group apim-rg --template-file "app_service.bicep" --parameters app_service.json
+        az deployment group validate --resource-group apim-rg --template-file "app_service.bicep" --parameters app_service.json
