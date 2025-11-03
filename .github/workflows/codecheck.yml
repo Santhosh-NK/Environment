@@ -17,5 +17,6 @@ jobs:
 
 
     - name: Deploy App Service
+      shell: bash
       run: |
         az deployment group validate --resource-group apim-rg --template-file "app_service.bicep" --parameters app_service.json
