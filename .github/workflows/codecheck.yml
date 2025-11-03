@@ -17,8 +17,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Validate Bicep templates to ensure transpilation, linting, and preflight are successful
-        shell: bash
-        run: |
+      shell: bash
+      run: |
              chmod +x $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh
              $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh 
 
