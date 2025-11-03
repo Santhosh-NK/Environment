@@ -1,0 +1,21 @@
+name: Deploy App Service
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+      - test
+    types: opened
+
+jobs:
+  deploy:
+    runs-on: Self-hosted
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+
+    - name: Deploy App Service
+      run: |
+        az deployment group validate --resource-group apim-rg --template-file "app_service.bicep" --parameters app_service.json
