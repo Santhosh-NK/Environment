@@ -1,0 +1,24 @@
+name: commit message fetch
+on: 
+  workflow_dispatch:
+
+jobs:
+  extract-app-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get commit message
+        id: get_commit
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          echo "Commit message: $COMMIT_MSG"
+          # Extract app name using regex (adjust as needed)
+          APP_NAME=$(echo "$COMMIT_MSG" | grep -oP '(?<=deploy: )\w+')
+          echo "App name: $APP_NAME"
+          echo "app_name=$APP_NAME" >> $GITHUB_OUTPUT
+
+      - name: Use app name
+        run: |
+          echo "Triggering pipeline for app: ${{ steps.get_commit.outputs.app_name }}"
