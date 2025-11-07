@@ -15,7 +15,7 @@ jobs:
           COMMIT_MSG=$(git log -1 --pretty=%B)
           echo "Commit message: $COMMIT_MSG"
           # Extract app name using regex (adjust as needed)
-          APP_NAME=$(echo "$COMMIT_MSG" | grep -oP '(?<=deploy: )\w+')
+          APP_NAME=$(echo "$COMMIT_MSG" | grep -oP '(?<=deploy )\w+')
           echo "App name: $APP_NAME"
           echo "app_name=$APP_NAME" >> $GITHUB_OUTPUT
 
