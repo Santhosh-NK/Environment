@@ -1,0 +1,29 @@
+name: Codecheck_test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+      - dev
+      - test
+    types: opened
+ 
+
+jobs:
+  deploy:
+    runs-on: Self-hosted
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Validate Bicep templates to ensure transpilation, linting, and preflight are successful
+      shell: bash
+      run: |
+            chmod +x $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh
+            $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh 
+
+
+    - name: Deploy App Service
+      shell: bash
+      run: |
+        az deployment group validate --resource-group apim-rg --template-file "app_service.bicep" --parameters "./Deployments/app1/app1.json"

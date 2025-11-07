@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "appServiceName": {
-      "value": "storageaccount-appservice1508"
+      "value": "storageaccount-appservice1510"
     },
     "storageAccountName": {
       "value": "apimrga7d8"
