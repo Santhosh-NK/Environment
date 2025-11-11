@@ -21,4 +21,4 @@ jobs:
 
       - name: Use app name
         run: |
-          echo "Triggering pipeline for app: "${{ github.event.head_commit.message }}"
+          echo "Triggering pipeline for app:" ${{ github.event.head_commit.message }}
