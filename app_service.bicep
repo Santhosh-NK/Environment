@@ -15,6 +15,20 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   }
   kind: 'app'
 }
+resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
+  name: storageAccountName
+  location: location
+  sku: {
+    name: 'Standard_LRS'
+  }
+  kind: 'StorageV2'
+  properties: {
+    accessTier: 'Hot' // Options: Hot, Cool (for BlobStorage/StorageV2)
+    minimumTlsVersion: 'TLS1_2'
+    allowBlobPublicAccess: false
+    supportsHttpsTrafficOnly: true
+  }
+}
 
 resource appService 'Microsoft.Web/sites@2022-03-01' = {
   name: appServiceName
