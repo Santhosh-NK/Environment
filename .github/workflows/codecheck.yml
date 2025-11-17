@@ -7,7 +7,7 @@ on:
       - master
       - dev
       - test
-    types: opened
+    types: [opened, synchronize]
  
 
 jobs:
