@@ -15,7 +15,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Deploy App Service
+    - name: Validate Bicep templates to ensure transpilation, linting, and preflight are successful
       shell: bash
       run: |
-        az deployment group validate --resource-group apim-rg --template-file "app_service.bicep" --parameters "./Deployments/app1/app1.json"
+            chmod +x $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh
+            $GITHUB_WORKSPACE/.github/workflows/script/app_validate.sh 
