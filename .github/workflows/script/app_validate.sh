@@ -10,4 +10,4 @@ validate_runner() {
 # Main script starts here
 template_file="./storage.bicep"
 
-validate_runner "$template_file
+validate_runner "$template_file"
