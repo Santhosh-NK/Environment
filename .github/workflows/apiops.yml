@@ -45,6 +45,7 @@ jobs:
       - name: add new files
         run: |
           echo "Current Time: $(date +'%H:%M:%S')" >> something.txt
+          git add .
 
       - name: Skip if no changes
         id: diffcheck
@@ -59,7 +60,7 @@ jobs:
         if: steps.diffcheck.outputs.changed == 'false'
         run: |
           echo "No file changes detected. Exiting."
-          exit 0
+          exit 1
       
 
       - name: Authenticate gh CLI
