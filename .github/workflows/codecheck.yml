@@ -1,14 +1,7 @@
 name: Codecheck
 
 on:
-  workflow_dispatch:
-  pull_request:
-    branches:
-      - master
-      - dev
-      - test
-    types: opened
- 
+  workflow_dispatch: 
 
 jobs:
   deploy:
